@@ -2,17 +2,51 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 16px;
-  background-color: black; }
+  font-size: 16px; }
 
 body {
-  max-height: 100%;
-  position: relative; }
+  height: 100vh;
+  display: flex;
+  background-color: black;
+  background-image: url("/src/imgSite/Silueta_NEGRA.png");
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+header {
+  align-items: start;
+  padding: 10px; }
+
+.menu {
+  height: 50px;
+  width: 50px;
+  border: 2px solid #5E647E;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: 300ms ease-in-out;
+  cursor: pointer; }
+  .menu:hover {
+    background-color: #DFE3EF; }
+
+.bar {
+  height: 3px;
+  width: 40px;
+  background-color: #5E647E;
+  border-radius: 2.5px;
+  transition: 200ms ease-in-out; }
+
+.menu.active .bar:nth-last-child(1) {
+  transform: translateY(-11px) rotate(-45deg); }
+
+.menu.active .bar:nth-last-child(2) {
+  opacity: 0; }
+
+.menu.active .bar:nth-last-child(3) {
+  transform: translateY(11px) rotate(45deg); }
 
 .silueta {
-  display: block;
-  margin: auto;
-  padding: 2rem; }
+  padding: 1rem;
+  z-index: -10000; }

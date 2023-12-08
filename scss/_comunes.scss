@@ -1,20 +1,67 @@
 * {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-    box-sizing: border-box;
     font-size: 16px;
-    background-color: $negro;
 }
 
 body {
-    max-height: 100%;
-    position: relative;
+    height: 100vh;
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    background-color: $negro;
+    background-image: url("/src/imgSite/Silueta_NEGRA.png");
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
+header {
+    align-items: start;
+    padding: 10px;
+}
+
+//Navbar
+
+.menu {
+    height: 50px;
+    width: 50px;
+    border: 2px solid $gray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+        background-color: $graylight;
+    }
+}
+
+.bar {
+    height: 3px;
+    width: 40px;
+    background-color: $gray;
+    border-radius: 2.5px;
+    transition: 200ms ease-in-out;
+}
+
+.menu.active {
+    .bar:nth-last-child(1){
+        transform: translateY(-11px) rotate(-45deg);
+    }
+    .bar:nth-last-child(2){
+        opacity: 0;
+    }
+    .bar:nth-last-child(3){
+        transform: translateY(11px) rotate(45deg);
+    }
+}
+
+
 .silueta{
-    display: block;
-    margin: auto;
-    padding: 2rem;
+    // max-width: 365px;
+    padding: 1rem;
+    z-index: -10000;
 }
