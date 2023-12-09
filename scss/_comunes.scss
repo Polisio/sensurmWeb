@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    border: 0;
     font-size: 16px;
 }
 
@@ -10,7 +11,7 @@ body {
     // justify-content: center;
     // align-items: center;
     background-color: $negro;
-    background-image: url("/src/imgSite/Silueta_NEGRA.png");
+    background-image: url("../src/imgSite/siluetaNeg.png");
     background-repeat: no-repeat;
     background-position: center center;
 }
