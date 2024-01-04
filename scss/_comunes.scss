@@ -26,9 +26,11 @@ body {
     position: fixed;
     top: 0;
     width: 100vw;
+    align-items: center;
+    text-align: center;
     img {
         padding: 2rem;
-        width: 100%;
+        width: 80%;
     }
 }
 
@@ -182,6 +184,7 @@ body {
     background-repeat: no-repeat;
     background-size: 80%;
     animation: animate 3s linear infinite;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
