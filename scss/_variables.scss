@@ -45,8 +45,8 @@ $graywhite: #f2f1f3;
 
 // Define las variables para los breakpoints
 $breakpoints: (
-    xs: 281px,
-    sm: 576px,
+    xs: 0px,
+    sm: 281px,
     md: 768px,
     lg: 992px,
     xl: 1200px,
@@ -55,7 +55,7 @@ $breakpoints: (
 
 // Define el mixin para los breakpoints
 @mixin breakpoint($breakpoint) {
-    @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
         @content;
     }
 }
