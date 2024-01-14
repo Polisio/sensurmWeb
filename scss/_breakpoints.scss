@@ -11,4 +11,32 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: rgba(255, 255, 255, 0);
     }
+
+
+}
+
+@include breakpoint (md) {
+    .icon {
+        font-size: 2.5rem;
+        color: $gray;
+        cursor: pointer;
+        transition: .5s;
+        &:hover {
+            color: $whine;
+        }
+    }
+}
+
+@include breakpoint (lg) {
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        align-items: center;
+        text-align: center;
+        img {
+            padding: 2rem;
+            max-width: 30%;
+        }
+    }
 }
